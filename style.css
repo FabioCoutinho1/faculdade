@@ -4,15 +4,23 @@
     box-sizing: border-box;
 }
 
+body{
+    background: black url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
 main{
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
-
     width: 100%;
     max-width: 800px;
 
-    margin: 100px auto;
+    margin:10px auto;
 
 }
 
