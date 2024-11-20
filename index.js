@@ -1,4 +1,8 @@
 const grid = document.querySelector(".grid")
+const load = document.querySelector(".load")
+const bntLoad = document.querySelector("#load-btn")
+
+let numCadsCheck = 0
 
 const cats = [
     "cat1",
@@ -26,7 +30,7 @@ const checkEndGame = () => {
     const disableCard = document.querySelectorAll('.disable-card')
 
     if(disableCard.length === 20){
-        alert("Parabens")
+        location.reload()
     };
 };
 
@@ -41,6 +45,8 @@ const chackCards = () =>{
 
         fisrtCard = '';
         secundCard = '';
+
+        numCadsCheck+=1
 
         checkEndGame();
 
@@ -102,4 +108,10 @@ const loadGame = () =>{
     });
 };
 
-loadGame();
+const animationLoad =  bntLoad.onclick = ()=>{
+    load.classList.add('animation');
+    setTimeout(() =>{
+        loadGame();
+        return
+    }, 2000);
+};
